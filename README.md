@@ -11,12 +11,19 @@ Create a .env.dev file in the root folder and set the values for the following p
 DEBUG=1
 SECRET_KEY=
 DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
-SQL_ENGINE=django.db.backends.postgresql
-SQL_DATABASE=
-SQL_USER=
-SQL_PASSWORD=
-SQL_HOST=db
-SQL_PORT=5432
+POSTGRES_ENGINE=django.db.backends.postgresql
+POSTGRES_DB=
+POSTGRES_USER=admin
+POSTGRES_PASSWORD=
+POSTGRES_HOST=db
+POSTGRES_PORT=5432
+
+```
+
+If you want to create another repository based o this project, you can change the remote origin with the following command:
+
+```
+git remote set-url origin <url>
 ```
 
 Buld the image with:
@@ -26,13 +33,7 @@ docker-compose build
 
 Run the cointainer:
 ```
-docker-compose up -d
-```
-
-If you want to create another repository based o this project, you can change the remote origin with the following command:
-
-```
-git remote set-url origin <url>
+docker-compose up
 ```
 
 To run the migrations use the following onstruction:
