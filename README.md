@@ -13,7 +13,7 @@ SECRET_KEY=
 DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
 POSTGRES_ENGINE=django.db.backends.postgresql
 POSTGRES_DB=
-POSTGRES_USER=admin
+POSTGRES_USER=
 POSTGRES_PASSWORD=
 POSTGRES_HOST=db
 POSTGRES_PORT=5432
@@ -41,7 +41,7 @@ To run the migrations use the following onstruction:
 docker-compose exec web python manage.py migrate --noinput
 ```
 
-If you get and error, put down the container and remove volumnes with 
+If you get and error, put down the container and remove volumnes with:
 ```
 docker-compose down -v
 ```
